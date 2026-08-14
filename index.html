@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leonardo Cruz — Portfólio Técnico</title>
+<style>
+  :root{
+    --bg:#0a0e14; --panel:#12181f; --border:#26303b;
+    --text:#c9d3dc; --text-dim:#7a8a99;
+    --accent:#58a6ff; --ok:#3fb950; --warn:#d29922;
+    --mono:'JetBrains Mono','SFMono-Regular',Consolas,monospace;
+    --sans:'Inter','Segoe UI',sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;}
+  .wrap{max-width:920px;margin:0 auto;padding:48px 20px 80px;}
+
+  header{margin-bottom:48px;}
+  .eyebrow{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;}
+  h1{font-size:34px;margin:0 0 8px;color:#fff;font-weight:700;}
+  .role{font-size:16px;color:var(--text-dim);margin-bottom:18px;}
+  .contact{display:flex;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:12.5px;color:var(--text-dim);}
+  .contact a{color:var(--accent);text-decoration:none;}
+  .contact a:hover{text-decoration:underline;}
+
+  .lede{font-size:15.5px;color:var(--text);max-width:68ch;margin-top:22px;border-left:3px solid var(--accent);padding-left:16px;}
+
+  h2.section-title{
+    font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;color:var(--text-dim);
+    text-transform:uppercase;margin:52px 0 18px;padding-bottom:10px;border-bottom:1px solid var(--border);
+  }
+
+  .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;}
+  .skill-card{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:16px 18px;}
+  .skill-card h4{margin:0 0 10px;font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:.04em;}
+  .skill-card ul{margin:0;padding-left:16px;font-size:13px;color:var(--text);}
+  .skill-card li{margin-bottom:4px;}
+
+  .case-list{display:flex;flex-direction:column;gap:14px;}
+  .case-card{
+    background:var(--panel);border:1px solid var(--border);border-radius:8px;
+    padding:18px 20px;display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;
+  }
+  .case-card .info{flex:1;min-width:240px;}
+  .case-card h4{margin:0 0 6px;font-size:15.5px;color:#fff;}
+  .case-card p{margin:0;font-size:13.5px;color:var(--text-dim);}
+  .case-card .tags{margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;}
+  .tag{font-family:var(--mono);font-size:10.5px;background:#1b2530;border:1px solid var(--border);color:var(--text-dim);padding:2px 7px;border-radius:4px;}
+  .case-card a.btn{
+    align-self:center;font-family:var(--mono);font-size:12px;color:var(--accent);
+    border:1px solid var(--accent);padding:7px 14px;border-radius:6px;text-decoration:none;white-space:nowrap;
+  }
+  .case-card a.btn:hover{background:rgba(88,166,255,.1);}
+
+  .status-note{
+    margin-top:6px;font-family:var(--mono);font-size:11px;color:var(--warn);
+  }
+
+  footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--border);font-size:12.5px;color:var(--text-dim);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Portfólio técnico</div>
+    <h1>Leonardo Cruz</h1>
+    <div class="role">Analista de Infraestrutura Sênior · SysAdmin · Segurança · Automação com IA</div>
+    <div class="contact">
+      <span>Campinas/Sumaré, SP</span>
+      <a href="https://www.linkedin.com/in/leonardoccruz">linkedin.com/in/leonardoccruz</a>
+      <a href="mailto:cruzlleo@gmail.com">cruzlleo@gmail.com</a>
+    </div>
+    <p class="lede">
+      Mais de 10 anos administrando infraestrutura híbrida (Linux/Windows, virtualização, redes, segurança).
+      Esta página reúne, em um só lugar, os projetos e estudos de caso técnicos que normalmente ficam
+      espalhados entre currículo, GitHub e conversas — pra quem quer entender rápido o que eu entrego na prática.
+    </p>
+  </header>
+
+  <h2 class="section-title">Matriz de competências</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h4>Infraestrutura & Redes</h4>
+      <ul>
+        <li>Linux (Debian/Ubuntu/CentOS) e Windows Server</li>
+        <li>Virtualização (ESXi/vSphere)</li>
+        <li>DHCP, DNS autoritativo, VPN (OpenVPN)</li>
+        <li>Active Directory / GPO</li>
+        <li>iptables / firewall / VLAN design</li>
+        <li>Storage (iSCSI, NAS)</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h4>Segurança / DevSecOps</h4>
+      <ul>
+        <li>Gitleaks, Semgrep, Trivy, Checkov</li>
+        <li>SAST em larga escala (1.000+ repositórios)</li>
+        <li>Regras de análise customizadas</li>
+        <li>LGPD / boas práticas de compliance</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h4>Containers & DevOps</h4>
+      <ul>
+        <li>Docker / Docker Compose</li>
+        <li>Rancher</li>
+        <li>Migração blue/green sem downtime</li>
+        <li>Automação sem acesso GUI (scripting direto)</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h4>Observabilidade & FinOps</h4>
+      <ul>
+        <li>Grafana / Zabbix</li>
+        <li>PostgreSQL para métricas de série temporal</li>
+        <li>Diagnóstico de causa raiz → redução de custo de storage</li>
+        <li>Dashboards de negócio customizados</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h4>Automação & Scripting</h4>
+      <ul>
+        <li>Python, Bash, PowerShell</li>
+        <li>Bots de aprovação e controle remoto</li>
+        <li>Integração via API REST / GraphQL</li>
+        <li>Automação de processos entre áreas (TI ↔ Financeiro/Compras)</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h4>IA Generativa</h4>
+      <ul>
+        <li>Bots conversacionais com interpretação em linguagem natural</li>
+        <li>Integração de modelos de IA via API máquina-a-máquina</li>
+        <li>Estruturação de base de conhecimento para treinar IA de atendimento</li>
+        <li>Google Workspace / Gen AI aplicado a produtividade</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h4>Full-Stack / Produto</h4>
+      <ul>
+        <li>Next.js, React, Node.js, TypeScript</li>
+        <li>PostgreSQL/MySQL + Prisma/Drizzle</li>
+        <li>Stripe / MercadoPago (cobrança recorrente)</li>
+        <li>Deploy em produção (Vercel, Railway)</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h4>Gestão & Governança de TI</h4>
+      <ul>
+        <li>DPO — Formação em Data Protection Officer</li>
+        <li>Gestão de contratos e fornecedores de TI</li>
+        <li>Onboarding/offboarding e inventário de ativos</li>
+        <li>Consultoria independente (diagnóstico e plano de ação)</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="section-title">Case studies técnicos</h2>
+  <p style="font-size:13.5px;color:var(--text-dim);margin-top:-6px;margin-bottom:18px;">
+    Ambientes e dados generalizados por confidencialidade — o foco é a engenharia aplicada.
+  </p>
+  <div class="case-list">
+    <div class="case-card">
+      <div class="info">
+        <h4>Pipeline DevSecOps de Auditoria de Segurança</h4>
+        <p>Auditoria estática autônoma em portfólio de 1.000+ repositórios, com priorização por probabilidade real de impacto.</p>
+        <div class="tags"><span class="tag">Gitleaks</span><span class="tag">Semgrep</span><span class="tag">Python</span><span class="tag">Trivy</span></div>
+      </div>
+      <a class="btn" href="https://github.com/cruzlleo/security-audit-pipeline">Ver case study →</a>
+    </div>
+    <div class="case-card">
+      <div class="info">
+        <h4>Infraestrutura Resiliente & Observabilidade Própria</h4>
+        <p>Eliminação de ponto único de falha, stack de observabilidade própria e otimização de storage com resultado direto em custo.</p>
+        <div class="tags"><span class="tag">Grafana</span><span class="tag">OpenVPN</span><span class="tag">FinOps</span></div>
+      </div>
+      <a class="btn" href="https://github.com/cruzlleo/infra-resiliencia-observabilidade">Ver case study →</a>
+    </div>
+    <div class="case-card">
+      <div class="info">
+        <h4>Automação em Escala e Migração Sem Downtime</h4>
+        <p>Deploy de agente em massa sem acesso GUI e migração blue/green de sistema interno com zero downtime.</p>
+        <div class="tags"><span class="tag">GPO</span><span class="tag">Blue/Green</span><span class="tag">Docker Compose</span></div>
+      </div>
+      <a class="btn" href="https://github.com/cruzlleo/automacao-escala-devops">Ver case study →</a>
+    </div>
+    <div class="case-card">
+      <div class="info">
+        <h4>Automação de Suporte com IA Generativa</h4>
+        <p>Bot conversacional que interpreta linguagem natural, classifica pedidos e cria chamados via API — com IA rodando em todo o volume de mensagens.</p>
+        <div class="tags"><span class="tag">Node.js</span><span class="tag">IA generativa</span><span class="tag">API M2M</span></div>
+      </div>
+      <a class="btn" href="https://github.com/cruzlleo/automacao-suporte-ia-generativa">Ver case study →</a>
+    </div>
+  </div>
+
+  <h2 class="section-title">Produtos em produção</h2>
+  <div class="case-list">
+    <div class="case-card">
+      <div class="info">
+        <h4>MeuSave — gestão financeira pessoal e a dois</h4>
+        <p>SaaS em produção com assinatura via MercadoPago, workspace compartilhado e trial de 7 dias.</p>
+        <div class="tags"><span class="tag">Next.js 16</span><span class="tag">Prisma</span><span class="tag">MercadoPago</span></div>
+      </div>
+      <a class="btn" href="https://www.meusave.com.br">Acessar →</a>
+    </div>
+    <div class="case-card">
+      <div class="info">
+        <h4>IPTV Manager — SaaS multi-tenant</h4>
+        <p>Plataforma de gestão de revendedores com RBAC completo, cobrança via Stripe e workers automáticos.</p>
+        <div class="tags"><span class="tag">React 19</span><span class="tag">tRPC</span><span class="tag">Stripe</span></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Página mantida manualmente — última atualização agosto/2026.
+    <span class="status-note">Todos os case studies usam dados generalizados/anonimizados por confidencialidade profissional.</span>
+  </footer>
+
+</div>
+</body>
+</html>
